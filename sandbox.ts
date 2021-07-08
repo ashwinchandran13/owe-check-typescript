@@ -1,40 +1,31 @@
-let character: string;
-let age: number;
-let isLoggedIn: boolean;
 
-age = 30;
+let age: any = 25;
 
-isLoggedIn = false;
+age = true;
+console.log(age);
+age = 'hello';
+console.log(age);
+age = {
+    name: 'luigi'
+};
+console.log(age);
 
-let ninjas: string[] = [];
-ninjas.push('asd');
+let mixed: any[] = [];
 
-let mixed: (string|number|boolean)[] = [];
-mixed.push('hello');
-mixed.push(33);
+mixed.push(3);
+mixed.push('ams');
 mixed.push(true);
-
 console.log(mixed);
 
+let ninja : { 
+    name: any, 
+    age: any
+};
 
-let uid: string|number;
-uid = 23;
-uid = 'adsa';
-
-
-let ninjaOne: object;
-ninjaOne = { name: 'yoshi', age: 30};
-
-let ninjaTwo: {
-    name: string,
-    age: number,
-    isLoggedIn: boolean
+ninja = {
+    name: 'yoshi',
+    age: 25,
 }
+console.log(ninja);
 
-ninjaTwo = {
-    name: 'mario',
-    age: 20,
-    isLoggedIn: false,
-    
-}
 
