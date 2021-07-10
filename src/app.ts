@@ -32,17 +32,3 @@ form.addEventListener('submit', (e: Event) => {
 
 });
 
-// tuples
-
-let arr = ['ryu', 25, true];
-arr[0] = false;
-arr[1] = 'yoshi';
-arr = [30, false, 'yoshi'];
-
-let tup: [string, number, boolean] = ['ryu', 25, true];
-tup[0] = 'true';
-tup[1] = 21;
-
-let student: [string, number];
-student = ['asd', 1232]
-
