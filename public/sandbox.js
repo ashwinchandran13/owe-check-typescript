@@ -1,14 +1,22 @@
 "use strict";
+// let greet: Function;
+// example 1
 var greet;
-// const add = (a: number, b: number, c?: number | string ) => {}
-var add = function (a, b, c) {
-    if (c === void 0) { c = 10; }
-    console.log(a + b);
-    console.log(c);
+greet = function (name, greeting) {
+    console.log("" + name);
 };
-//add(5, 10, 'asda')
-add(5, 10);
-var minus = function (a, b) {
-    return a + b;
+// example 2
+var calc;
+calc = function (numOne, numTwo, action) {
+    if (action === 'add') {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
 };
-var result = minus(10, 5);
+// example 3
+var logDetails;
+logDetails = function (ninja) {
+    console.log(ninja.name + " and " + ninja.age);
+};
