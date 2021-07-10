@@ -31,14 +31,29 @@ const addUID = (obj) => {
 };
 let docOne = addUID({ name: 'yoshi', age: 40 });
 console.log(docOne.name);
+// with interfaces
+// interface Resource {
+//     uid: number;
+//     resourceType: string;
+//     data: object;
+// }
+// ENUMS
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["FILM"] = 2] = "FILM";
+    ResourceType[ResourceType["DIRECTOR"] = 3] = "DIRECTOR";
+    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
+})(ResourceType || (ResourceType = {}));
 const docThree = {
     uid: 1,
-    resourceName: 'Yoshi',
+    resourceType: ResourceType.BOOK,
     data: { name: 'shaun' }
 };
 const docFour = {
     uid: 2,
-    resourceName: 'Shopping List',
+    resourceType: ResourceType.PERSON,
     data: ['dasdas', 'asd', 'asd']
 };
 console.log(docThree, docFour);
