@@ -1,17 +1,19 @@
-let greet: Function;
-
-// const add = (a: number, b: number, c?: number | string ) => {}
-const add = (a: number, b: number, c: number | string = 10) => {
-    console.log(a+b);
-    console.log(c);
+// type def
+type StringOrNum = string | number;
+type objectWithName = {
+    name: string,
+    uid: StringOrNum
+};
+// const logDetails = (uid: string | number, item: string) => {
+    // console.log(`${item} has a uid of ${uid}`);
+// }
+const logDetails = (uid: StringOrNum, item: string) => {
+    console.log(`${item} has a uid of ${uid}`);
 }
-//add(5, 10, 'asda')
-add(5,10);
 
-const minus = (a: number, b: number): number => {
-    return a + b;
+// const logDetailsAgain = (user: {name: string, uid: string | number}) => {
+    // console.log(`${user.name} has a uid of ${user.uid}`);
+// }
+const logDetailsAgain = (user: objectWithName) => {
+    console.log(`${user.name} has a uid of ${user.uid}`);
 }
-
-let result = minus(10, 5);
-
-
